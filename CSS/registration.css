@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body #rf {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  font-size: 5rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-transform: capitalize;
+  font-family: 'Pirata One', cursive;
+  letter-spacing: 0.5rem;
+  margin: 0;
+  padding: 0;
+  color: transparent;
+}
+
+body #rf::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  overflow: hidden;
+  border-right: 0.1rem solid #fff;
+  -webkit-animation: type 7s steps(20) infinite;
+          animation: type 7s steps(20) infinite;
+  white-space: nowrap;
+}
+
+.container {
+  width: 75vw;
+  height: 85vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 7px #000, -5px -5px 7px #000;
+          box-shadow: 5px 5px 7px #000, -5px -5px 7px #000;
+  border-radius: 1rem;
+}
+
+.container .textHide {
+  font-size: 5rem;
+  visibility: hidden;
+}
+
+.container .verticalLine {
+  position: absolute;
+  width: 0.2%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 60vh;
+  background-color: #fff;
+}
+
+.container a .fa {
+  position: absolute;
+  top: 11%;
+  left: 15%;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.container a .fa:hover {
+  color: #03a9f4;
+}
+
+.container .inputBoxLeft {
+  position: relative;
+}
+
+.container .inputBoxLeft input {
+  width: 37%;
+  margin-left: 3rem;
+  margin-top: 2rem;
+  padding: 9px;
+  font-size: 1.6rem;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2.5rem;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  outline: none;
+}
+
+.container .inputBoxLeft label {
+  position: absolute;
+  top: 25%;
+  left: 3%;
+  letter-spacing: 0.1rem;
+  padding: 10px 0;
+  font-size: 2rem;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .inputBoxLeft label#l1 {
+  top: -3%;
+  left: 3%;
+  color: #03a9f4;
+  font-size: 1.8rem;
+}
+
+.container .inputBoxLeft input:focus ~ label, .container .inputBoxLeft input:valid ~ label {
+  top: -3%;
+  left: 3%;
+  color: #03a9f4;
+  font-size: 1.8rem;
+}
+
+.container .showHide span.show {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  top: 23%;
+  left: 35%;
+  border: 2px solid #fff;
+  padding: 0.2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  visibility: hidden;
+}
+
+.container .showHide input:valid ~ span.show {
+  visibility: visible;
+}
+
+.container .inputBoxRight {
+  position: relative;
+}
+
+.container .inputBoxRight input {
+  position: absolute;
+  right: 0;
+  bottom: 1%;
+  width: 37%;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  padding: 9px;
+  font-size: 1.6rem;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2.5rem;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  outline: none;
+}
+
+.container .inputBoxRight label {
+  position: absolute;
+  bottom: 2rem;
+  left: 60%;
+  letter-spacing: 0.1rem;
+  padding: 10px 0;
+  font-size: 2rem;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .inputBoxRight label#r1 {
+  bottom: 4.5rem;
+  left: 60%;
+  color: #03a9f4;
+  font-size: 1.8rem;
+}
+
+.container .inputBoxRight input:focus ~ label, .container .inputBoxRight input:valid ~ label {
+  bottom: 4.5rem;
+  left: 60%;
+  color: #03a9f4;
+  font-size: 1.8rem;
+}
+
+.container .galleryBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 3%;
+}
+
+.container .galleryBox input {
+  padding: 0.3rem;
+  margin-top: 1rem;
+  outline: none;
+  margin-right: 64rem;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.container .galleryBox label {
+  position: absolute;
+  top: -3%;
+  left: 0;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.container .selectOption {
+  position: relative;
+}
+
+.container .selectOption select {
+  position: absolute;
+  right: 0;
+  bottom: 11rem;
+  width: 37%;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  padding: 9px;
+  font-size: 1.6rem;
+  color: white;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2.5rem;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  outline: none;
+}
+
+.container .selectOption select#down1 {
+  bottom: 3rem;
+}
+
+.container .selectOption select option {
+  background-color: black;
+}
+
+.container .selectOption label {
+  position: absolute;
+  bottom: 16rem;
+  left: 60%;
+  letter-spacing: 0.1rem;
+  padding: 10px 0;
+  font-size: 2rem;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .selectOption label#down2 {
+  bottom: 8rem;
+}
+
+.container input[type="submit"] {
+  position: absolute;
+  bottom: 11%;
+  left: 46.5%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #03a9f4;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+/*# sourceMappingURL=registration.css.map */
